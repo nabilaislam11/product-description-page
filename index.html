@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BrandName</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Image Carousel -->
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="product1.jpg" class="d-block w-100" alt="Product Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="product2.jpg" class="d-block w-100" alt="Product Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="product3.jpg" class="d-block w-100" alt="Product Image 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container my-5">
+        <h1>Product Name</h1>
+        <h3>Tagline for the product</h3>
+        <p class="text-success">Price: $199.99</p>
+        <h4>Key Features:</h4>
+        <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+        </ul>
+
+        <!-- Accordion for Description & Specifications -->
+        <div class="accordion" id="productAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="descriptionHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#descriptionCollapse" aria-expanded="true" aria-controls="descriptionCollapse">
+                        Product Description
+                    </button>
+                </h2>
+                <div id="descriptionCollapse" class="accordion-collapse collapse show" aria-labelledby="descriptionHeading" data-bs-parent="#productAccordion">
+                    <div class="accordion-body">
+                        This is where the detailed description of the product goes. It provides insight into the product's uses, materials, and other relevant information.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="specificationsHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#specificationsCollapse" aria-expanded="false" aria-controls="specificationsCollapse">
+                        Technical Specifications
+                    </button>
+                </h2>
+                <div id="specificationsCollapse" class="accordion-collapse collapse" aria-labelledby="specificationsHeading" data-bs-parent="#productAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Specification 1</li>
+                            <li>Specification 2</li>
+                            <li>Specification 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-4">
+        <p>Follow us on:</p>
+        <a href="#" class="me-3">Facebook</a>
+        <a href="#" class="me-3">Twitter</a>
+        <a href="#" class="me-3">Instagram</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
