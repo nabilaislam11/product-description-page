@@ -1,25 +1,24 @@
 # Product Description Page
 
-A responsive product presentation page built with **HTML5 and Bootstrap 5**. The interface brings together product imagery, pricing, feature highlights, and expandable product information.
+A responsive product showcase built with **HTML5 and Bootstrap 5**, featuring a mobile-friendly page layout and interactive product information components.
 
 ## Features
 
-- Responsive navigation bar
-- Product image carousel with previous/next controls
-- Product title, tagline, price, and key-feature list
-- Expandable description and technical-specification sections
-- Footer with social navigation links
+- Responsive navigation and page grid
+- Three-slide product illustration carousel
+- Product details, feature highlights, and illustrative pricing
+- Accessible accordion panels for description and specifications
+- Mobile-first layout with Bootstrap utilities
+- Inline SVG illustrations, without missing external image dependencies
 
 ## Technologies
 
-- HTML5
-- Bootstrap 5.3
-- Bootstrap JavaScript components and Popper
+HTML5 · CSS3 · Bootstrap 5.3 · Inline SVG · Bootstrap JavaScript
 
-## Run locally
+## View locally
 
-Open [`index.html`](index.html) in a web browser. The page loads Bootstrap from a CDN, so an internet connection is required for those assets.
+Open [`index.html`](index.html) in a web browser. Bootstrap assets are loaded from a CDN.
 
 ## Implementation
 
-The page uses Bootstrap's grid, navigation, carousel, and accordion components to organize product information into a clean interface. Update the product text and image files in `index.html` to customize the example.
+The page uses Bootstrap's navbar, grid, carousel, and accordion components, with custom styling for the example product. The product and its specifications are illustrative; this is a frontend design project, not a shopping checkout application.
