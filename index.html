@@ -1,106 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Description Page</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive Bootstrap product showcase with carousel, feature highlights, and accordion specifications.">
+  <title>Wireless Headphones | Product Description Template</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --ink: #17243b; --accent: #3258d8; --surface: #f2f5fa; }
+    body { color: var(--ink); background: #fff; }
+    .brand-mark { font-weight: 800; letter-spacing: -.02em; }
+    .product-stage { background: var(--surface); border-radius: 1.5rem; min-height: 375px; display: grid; place-items: center; overflow: hidden; }
+    .slide-art { display: grid; place-items: center; min-height: 355px; position: relative; }
+    .slide-art::before { content: ""; position: absolute; width: 260px; height: 260px; border-radius: 50%; background: rgba(50,88,216,.07); }
+    .slide-art svg { position: relative; width: min(240px,60vw); height: auto; stroke: var(--ink); stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 14px 15px rgba(23,36,59,.13)); }
+    .slide-art.silver svg { stroke: #61758d; }
+    .slide-art.blue svg { stroke: #3258d8; }
+    .carousel-control-next-icon,.carousel-control-prev-icon { filter: invert(1); }
+    .category-label { text-transform: uppercase; font-size: .78rem; font-weight: 700; letter-spacing: .12em; color: #4e6192; }
+    .price { font-size: 2rem; font-weight: 750; color: var(--ink); }
+    .feature-list li { margin-bottom: .7rem; }
+    .details-card { border: 1px solid #e2e8f0; border-radius: 1.2rem; }
+    .accordion-button:not(.collapsed) { color: var(--ink); background: #eef2ff; box-shadow: none; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #3258d8; outline-offset: 3px; }
+  </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">BrandName</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand-mark" href="#top">Product Showcase</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="siteNav"><div class="navbar-nav ms-auto"><a class="nav-link" href="#features">Features</a><a class="nav-link" href="#details">Specifications</a><a class="nav-link" href="#about">About the template</a></div></div>
+      </div>
     </nav>
-
-    <!-- Product Image Carousel -->
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="product1.jpg" class="d-block w-100" alt="Product Image 1">
+  </header>
+  <main id="top" class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="product-stage">
+          <div id="productCarousel" class="carousel slide w-100" data-bs-ride="false" aria-label="Illustrative product carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><div class="slide-art" role="img" aria-label="Over-ear headphones illustration, charcoal finish">
+                <svg viewBox="0 0 240 240" fill="none" stroke-width="12"><path d="M49 137V113a71 71 0 0 1 142 0v24"/><rect x="32" y="128" width="36" height="69" rx="15" fill="#cad4e6"/><rect x="172" y="128" width="36" height="69" rx="15" fill="#cad4e6"/><path d="M68 171v-34M172 171v-34"/></svg>
+              </div></div>
+              <div class="carousel-item"><div class="slide-art silver" role="img" aria-label="Over-ear headphones illustration, silver finish">
+                <svg viewBox="0 0 240 240" fill="none" stroke-width="12"><path d="M49 137V113a71 71 0 0 1 142 0v24"/><rect x="32" y="128" width="36" height="69" rx="15" fill="#e2e8f0"/><rect x="172" y="128" width="36" height="69" rx="15" fill="#e2e8f0"/><path d="M68 171v-34M172 171v-34"/></svg>
+              </div></div>
+              <div class="carousel-item"><div class="slide-art blue" role="img" aria-label="Over-ear headphones illustration, blue finish">
+                <svg viewBox="0 0 240 240" fill="none" stroke-width="12"><path d="M49 137V113a71 71 0 0 1 142 0v24"/><rect x="32" y="128" width="36" height="69" rx="15" fill="#dce5ff"/><rect x="172" y="128" width="36" height="69" rx="15" fill="#dce5ff"/><path d="M68 171v-34M172 171v-34"/></svg>
+              </div></div>
             </div>
-            <div class="carousel-item">
-                <img src="product2.jpg" class="d-block w-100" alt="Product Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="product3.jpg" class="d-block w-100" alt="Product Image 3">
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous illustration</span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next illustration</span></button>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <div class="container my-5">
-        <h1>Product Name</h1>
-        <h3>Tagline for the product</h3>
-        <p class="text-success">Price: $199.99</p>
-        <h4>Key Features:</h4>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
+        <p class="small text-secondary mt-3">Interactive product presentation demo · Illustrative product and specifications</p>
+      </div>
+      <div class="col-lg-6">
+        <p class="category-label">Audio accessories · Demo product</p>
+        <h1 class="display-5 fw-bold mb-3">Wireless Over-Ear Headphones</h1>
+        <p class="lead text-secondary">A responsive example of product storytelling, feature comparison, and accessible information layout.</p>
+        <p class="price mb-1">$199.99</p>
+        <p class="small text-muted mb-4">Illustrative price for layout demonstration</p>
+        <h2 id="features" class="h5 fw-bold mb-3">Feature highlights</h2>
+        <ul class="feature-list">
+          <li>Comfort-focused over-ear design</li>
+          <li>Wireless listening interface</li>
+          <li>Easy-access control layout</li>
+          <li>Three illustrative finish options</li>
         </ul>
-
-        <!-- Accordion for Description & Specifications -->
-        <div class="accordion" id="productAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="descriptionHeading">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#descriptionCollapse" aria-expanded="true" aria-controls="descriptionCollapse">
-                        Product Description
-                    </button>
-                </h2>
-                <div id="descriptionCollapse" class="accordion-collapse collapse show" aria-labelledby="descriptionHeading" data-bs-parent="#productAccordion">
-                    <div class="accordion-body">
-                        This is where the detailed description of the product goes. It provides insight into the product's uses, materials, and other relevant information.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="specificationsHeading">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#specificationsCollapse" aria-expanded="false" aria-controls="specificationsCollapse">
-                        Technical Specifications
-                    </button>
-                </h2>
-                <div id="specificationsCollapse" class="accordion-collapse collapse" aria-labelledby="specificationsHeading" data-bs-parent="#productAccordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Specification 1</li>
-                            <li>Specification 2</li>
-                            <li>Specification 3</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <a class="btn btn-primary px-4 py-2" href="#details">Explore specifications</a>
+      </div>
     </div>
-
-    <footer class="bg-light text-center py-4">
-        <p>Follow us on:</p>
-        <a href="#" class="me-3">Facebook</a>
-        <a href="#" class="me-3">Twitter</a>
-        <a href="#" class="me-3">Instagram</a>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <section id="details" class="mt-5 pt-3">
+      <h2 class="h3 mb-3">Product details</h2>
+      <div class="accordion details-card overflow-hidden" id="productAccordion">
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#description" aria-expanded="true" aria-controls="description">Description</button></h3><div id="description" class="accordion-collapse collapse show" data-bs-parent="#productAccordion"><div class="accordion-body">A sample consumer-electronics product description designed to demonstrate clear visual hierarchy, consistent typography, and responsive Bootstrap components.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#specs" aria-expanded="false" aria-controls="specs">Technical specifications</button></h3><div id="specs" class="accordion-collapse collapse" data-bs-parent="#productAccordion"><div class="accordion-body"><dl class="row mb-0"><dt class="col-sm-4">Category</dt><dd class="col-sm-8">Wireless audio accessories</dd><dt class="col-sm-4">Style</dt><dd class="col-sm-8">Over-ear</dd><dt class="col-sm-4">Variants</dt><dd class="col-sm-8">Charcoal, silver, blue (illustrative)</dd><dt class="col-sm-4">Purpose</dt><dd class="col-sm-8">Static product page demo</dd></dl></div></div></div>
+      </div>
+    </section>
+    <section id="about" class="mt-5 pt-3"><h2 class="h4">About this project</h2><p>This responsive frontend exercise demonstrates Bootstrap layout, a three-slide carousel, collapsible product information, and adaptable mobile navigation. <a href="https://github.com/nabilaislam11/product-description-page">View the HTML source on GitHub</a>.</p></section>
+  </main>
+  <footer class="border-top bg-light py-4"><div class="container d-flex flex-wrap gap-3 justify-content-between"><span class="small text-muted">HTML5 · Bootstrap 5 · Responsive design</span><a href="https://github.com/nabilaislam11">GitHub profile</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
