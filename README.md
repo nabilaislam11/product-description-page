@@ -15,10 +15,8 @@ A responsive product showcase built with **HTML5 and Bootstrap 5**, featuring a 
 
 HTML5 · CSS3 · Bootstrap 5.3 · Inline SVG · Bootstrap JavaScript
 
-## View locally
-
-Open [`index.html`](index.html) in a web browser. Bootstrap assets are loaded from a CDN.
-
 ## Implementation
+
+The project is a static website that opens directly in a browser. Bootstrap assets are loaded from a CDN.
 
 The page uses Bootstrap's navbar, grid, carousel, and accordion components, with custom styling for the example product. The product and its specifications are illustrative; this is a frontend design project, not a shopping checkout application.
